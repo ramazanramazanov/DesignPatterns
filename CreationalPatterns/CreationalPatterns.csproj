@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51E7D798-F81C-4593-AFDE-146EF6EF1C10}</ProjectGuid>
+    <ProjectGuid>{1C4C0DF1-09EB-4829-AF73-2882C498D59D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory</RootNamespace>
-    <AssemblyName>AbstractFactory</AssemblyName>
+    <RootNamespace>CreationalPatterns</RootNamespace>
+    <AssemblyName>CreationalPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\CardService.cs" />
+    <Compile Include="AbstractFactory\Cards\Classic.cs" />
+    <Compile Include="AbstractFactory\Cards\Platinum.cs" />
+    <Compile Include="AbstractFactory\Cards\Premium.cs" />
+    <Compile Include="AbstractFactory\ICreditCardFactory.cs" />
+    <Compile Include="AbstractFactory\CreditCardsFactory\ClassicFactory.cs" />
+    <Compile Include="AbstractFactory\CreditCardsFactory\PlatiniumFactory.cs" />
+    <Compile Include="AbstractFactory\CreditCardsFactory\PremiumFactory.cs" />
+    <Compile Include="AbstractFactory\ICreditCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
