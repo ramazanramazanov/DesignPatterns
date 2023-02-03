@@ -14,9 +14,7 @@ namespace CreationalPatterns.AbstractFactory
             ICreditCardFactory factory=GetFactoryForDietType(type);
             ICardService service = new CardService(factory);
             var card =service.CardOrder();
-            Console.WriteLine(card.GetCardType());
-            Console.WriteLine(card.GetCreditLimit());
-            Console.WriteLine(card.GetAnnualCharge());
+            Console.WriteLine("Card name: {0} limit: {1} annual charge: {2}", card.GetCardType(), card.GetCreditLimit(), card.GetAnnualCharge());
         }
         static ICreditCardFactory GetFactoryForDietType(string type)
         {
