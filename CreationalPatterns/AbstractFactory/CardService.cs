@@ -15,29 +15,14 @@ namespace CreationalPatterns.AbstractFactory
         {
             _factory = factory;
         }
-        public async Task<ICreditCard> CardOrder(string type)
+        public ICreditCard CardOrder()
         {
-            ICreditCard product=null;
-            switch (type)
-            {
-                case "classic":
-                    product= new Classic();
-                    break;
-                case "platinium":
-                    product = new Platinum();
-                    break;
-                case "premium":
-                    product = new Premium();
-                    break;
-
-                default:
-                    break;
-            }
+            ICreditCard product=_factory.CreateProduct();
             return product;
         }
     }
     public interface ICardService
     {
-        Task<ICreditCard> CardOrder(string type);
+        ICreditCard CardOrder();
     }
 }

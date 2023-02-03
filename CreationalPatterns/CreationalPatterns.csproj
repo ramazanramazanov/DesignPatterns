@@ -47,6 +47,7 @@
     <Compile Include="AbstractFactory\Cards\Classic.cs" />
     <Compile Include="AbstractFactory\Cards\Platinum.cs" />
     <Compile Include="AbstractFactory\Cards\Premium.cs" />
+    <Compile Include="AbstractFactory\Client.cs" />
     <Compile Include="AbstractFactory\ICreditCardFactory.cs" />
     <Compile Include="AbstractFactory\CreditCardsFactory\ClassicFactory.cs" />
     <Compile Include="AbstractFactory\CreditCardsFactory\PlatiniumFactory.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreationalPatterns.AbstractFactory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,12 @@ namespace CreationalPatterns
     {
         static void Main(string[] args)
         {
+            Client.OrderCard("classic");
+            Console.WriteLine("******////////\\\\\\\\\\******");
+            Client.OrderCard("platinium");
+            Console.WriteLine("******////////\\\\\\\\\\******");
+            Client.OrderCard("premium");
+            Console.ReadLine();
         }
     }
 }
